@@ -1,0 +1,15 @@
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    a {
+        text-decoration: none;
+        color: black;
+        margin: 10px;
+    }
+    .logo {
+        color: white;
+        width: 50%;
+        font-size: 32px;
+    }
+}
