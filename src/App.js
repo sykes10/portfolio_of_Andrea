@@ -6,7 +6,7 @@ import Main from './pages/Main/Main';
 import "./App.scss";
 const App = () => (
   <div className="app">
-    <Header />
+    {/* <Header /> */}
     <Main />
   </div>
 )
