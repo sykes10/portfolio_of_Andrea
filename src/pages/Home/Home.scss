@@ -40,7 +40,39 @@
     }
 
     .works {
+        display: grid;
         grid-template-columns: 1fr;
     }
 }
 
+@include media-breakpoint-up(sm) {
+    .home {
+        .works {
+            grid-template-columns: repeat(2,1fr) !important;
+            justify-items: center;
+        }
+    }
+}
+@include media-breakpoint-up(md) {
+    .home {
+        .works {
+            grid-template-columns: repeat(3,1fr) !important;
+            justify-items: center;
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+    .home {
+        .works {
+            grid-template-columns: repeat(4,1fr) !important;
+            justify-items: center;
+        }
+    }
+}
+@include media-breakpoint-up(xl) {
+    .home {
+        .works {
+            grid-template-columns: repeat(5,1fr) !important;
+        }
+    }
+}

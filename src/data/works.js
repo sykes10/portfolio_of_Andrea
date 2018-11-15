@@ -14,7 +14,9 @@ export default [
         img: {
             url: atriom,
             alt: 'Atriom image'
-        }
+        },
+        title: 'Atriom',
+        desc: 'Brand and web design'
     },
     {
         id: 'dashboard',
@@ -22,7 +24,9 @@ export default [
         img: {
             url: dashboard,
             alt: 'dashboard image'
-        }
+        },
+        title: 'Atriom',
+        desc: 'Brand and web design'
     },
     {
         id: 'peopleOfGracia',
@@ -30,7 +34,9 @@ export default [
         img: {
             url: peopleOfGracia,
             alt: 'peopleOfGracia image'
-        }
+        },
+        title: 'Atriom',
+        desc: 'Brand and web design'
     },
     {
         id: 'selvaEscondida',
@@ -38,7 +44,9 @@ export default [
         img: {
             url: selvaEscondida,
             alt: 'selvaEscondida image'
-        }
+        },
+        title: 'Atriom',
+        desc: 'Brand and web design'
     },
     {
         id: 'oneness',
@@ -46,7 +54,9 @@ export default [
         img: {
             url: oneness,
             alt: 'oneness image'
-        }
+        },
+        title: 'Atriom',
+        desc: 'Brand and web design'
     },
     {
         id: 'cssTurismo',
@@ -54,7 +64,9 @@ export default [
         img: {
             url: cssTurismo,
             alt: 'cssTurismo image'
-        }
+        },
+        title: 'Atriom',
+        desc: 'Brand and web design'
     },
     {
         id: 'packagingAkg',
@@ -62,6 +74,8 @@ export default [
         img: {
             url: packagingAkg,
             alt: 'packagingAkg image'
-        }
+        },
+        title: 'Atriom',
+        desc: 'Brand and web design'
     }
 ]
