@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import ArrowIcon from '../../components/ArrowIcon';
 import Work from '../../components/Work/Work';
+
 import worksCollection from '../../data/works';
 
 const Home = () => (
@@ -14,11 +16,11 @@ const Home = () => (
                 Barcelona starting on the path of the UX and UI design.
             </p>
             <div className="link-container">
-                <Link className="link" to="/about">More about me <span className="arrow-icon">→</span></Link>
+                <Link className="link" to="/about">More about me <span className="arrow-icon"><ArrowIcon></ArrowIcon></span></Link>
             </div>
         </div>
         <div className="works">
-            {worksCollection.map(work => <Work {...work} />)}
+            {worksCollection.map(work => <Work key={work.id} {...work} />)}
         </div>
     </div>
 );

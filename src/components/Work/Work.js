@@ -2,18 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const Work = ({path = '/', img = {alt: '', url: ''}, backgroundColor = 'white' }) => {
-    console.log(img)
+const Work = ({path = '/', img = {alt: '', url: ''} }) => {
     return(
-    <div className="works">
-        <div className="work" style={{backgroundColor}}>
-            <Link to={path}>
-                <img
-                    alt={img.alt}
-                    src={img.url}
-                />
-            </Link>
-        </div>
+    <div className="work">
+        <Link to={path}>
+            <img
+                alt={img.alt}
+                src={img.url}
+            />
+        </Link>
     </div>
 )};
 
