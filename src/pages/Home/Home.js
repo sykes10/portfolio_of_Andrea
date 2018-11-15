@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Work from '../../components/Work/Work';
+import worksCollection from '../../data/works';
+
 const Home = () => (
     <div className="home">
         <div className="header">
@@ -15,14 +18,7 @@ const Home = () => (
             </div>
         </div>
         <div className="works">
-            <div className="work splited-bg">
-                <Link to="/about">
-                    <img
-                        alt=""
-                        src="https://static.wixstatic.com/media/2dc305_699daaef7a06469ab93c9b10059ce077~mv2_d_1489_1489_s_2.png/v1/fill/w_280,h_280,fp_0.50_0.50,q_90/2dc305_699daaef7a06469ab93c9b10059ce077~mv2_d_1489_1489_s_2.webp"
-                    />
-                </Link>
-            </div>
+            {worksCollection.map(work => <Work {...work} />)}
         </div>
     </div>
 );

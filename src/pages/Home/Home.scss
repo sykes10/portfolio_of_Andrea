@@ -1,35 +1,35 @@
 .home {
     box-sizing: border-box;
+
     .header {
         padding: 16px;
         background-color: $brand-01;
         color: white;
-        display: grid;
-        grid-template-rows: min-content min-content 1fr;
-        grid-template-columns: 100%;
 
         .highlighted {
             font-weight: 700;
             font-style: italic;
         }
 
-        .link-container{
-            display: block;
+        .link-container {
+            display: flex;
             justify-content: flex-end;
             margin-top: 20px;
-            .link{
+
+            .link {
                 color: $brand-02;
                 text-decoration: none;
                 float: right;
                 font-weight: 300;
-                .arrow-icon {
-                    font-size: 26px;
-                }
+            }
+
+            .arrow-icon {
+                font-size: 26px;
             }
         }
 
         p {
-            margin-bottom: 0; 
+            margin-bottom: 0;
             line-height: 28px;
         }
 
@@ -41,13 +41,6 @@
     }
 
     .works {
-        .splited-bg {
-            background-color: $brand-01;
-            background: linear-gradient(180deg, $brand-01 50%, #fff 50%);
-        }
-        img {
-            padding: 16px;
-            width: 100%;
-        }
+
     }
 }

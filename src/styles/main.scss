@@ -1,6 +1,9 @@
 @import './variables.scss';
 @import './breakpoints.scss';
 
+// Components Styles
+@import '../components/Work/Work.scss';
+
 
 // Pages Styles
 @import '../pages/Home/Home.scss';
