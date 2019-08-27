@@ -3,10 +3,10 @@
     <div>
       <logo />
       <h1 class="title">
-        portfolio
+        port
       </h1>
       <h2 class="subtitle">
-        My super-duper Nuxt.js project
+        My cat&#39;s pajamas Nuxt.js project
       </h2>
       <div class="links">
         <a

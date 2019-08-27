@@ -1,6 +1,6 @@
-# portfolio
+# port
 
-> My super-duper Nuxt.js project
+> My cat&#39;s pajamas Nuxt.js project
 
 ## Build Setup
 
