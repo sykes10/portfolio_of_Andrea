@@ -1,13 +1,21 @@
 <template>
   <div>
+    <p-header alternativeBg/>
     <nuxt />
   </div>
 </template>
 
+<script>
+import pHeader from '@/components/Header'
+
+export default {
+  components: { 'p-header': pHeader }
+}
+</script>
+
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: Rubik;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;

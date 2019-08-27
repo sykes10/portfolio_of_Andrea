@@ -1,41 +1,13 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        port
-      </h1>
-      <h2 class="subtitle">
-        My cat&#39;s pajamas Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+  <div class="layout">
+    <div class="container xl mx-auto px-40">
+      <h1 class="text-5xl text-white">I’m a Junior UX/UI designer based in London, starting on the path of UX and UI Design.</h1>
     </div>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
-export default {
-  components: {
-    Logo
-  }
-}
+export default {}
 </script>
 
 <style>
@@ -44,18 +16,13 @@ export default {
   @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.layout {
+  background-color: theme("colors.main");
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
