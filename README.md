@@ -1,10 +1,10 @@
-# port
+# andrea-portfolio
 
-> My cat&#39;s pajamas Nuxt.js project
+> My striking Nuxt.js project
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ yarn install
 
