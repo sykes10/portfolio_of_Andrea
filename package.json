@@ -1,7 +1,7 @@
 {
-  "name": "port",
+  "name": "andrea-portfolio",
   "version": "1.0.0",
-  "description": "My cat&#39;s pajamas Nuxt.js project",
+  "description": "My striking Nuxt.js project",
   "author": "Alejandro Arevalo",
   "private": true,
   "scripts": {
@@ -12,21 +12,44 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "test": "jest"
   },
+  "lint-staged": {
+    "*.{js,vue}": "yarn lint",
+    "*.{css,vue}": "stylelint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "dependencies": {
-    "nuxt": "^2.0.0"
+    "@nuxtjs/dotenv": "^1.4.0",
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "nuxt": "^2.0.0",
+    "postcss-import": "^12.0.1",
+    "vue-class-component": "^7.2.3",
+    "vue-property-decorator": "^8.4.2"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "^1.0.1",
+    "@nuxt/typescript-build": "^0.6.0",
+    "@nuxtjs/eslint-config-typescript": "^1.0.0",
     "@nuxtjs/eslint-module": "^1.0.0",
-    "@nuxtjs/tailwindcss": "^1.0.0",
+    "@nuxtjs/stylelint-module": "^3.1.0",
+    "@nuxtjs/tailwindcss": "^2.0.0",
     "@vue/test-utils": "^1.0.0-beta.27",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.1.0",
     "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-nuxt": ">=0.4.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.0.0",
     "jest": "^24.1.0",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^7.3.1",
+    "lint-staged": "^10.0.0",
+    "node-sass": "^4.14.1",
+    "prettier": "^1.19.1",
+    "sass-loader": "^8.0.2",
+    "stylelint": "^10.1.0",
+    "ts-jest": "^25.0.0",
     "vue-jest": "^4.0.0-0"
   }
 }
