@@ -1,53 +1,24 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        andrea-portfolio
+  <div class="layout">
+    <div class="container xl mx-auto px-40">
+      <h1 class="text-5xl">
+        I’m a Junior UX/UI designer based in London, starting on the path of UX
+        and UI Design.
       </h1>
-      <h2 class="subtitle">
-        My striking Nuxt.js project
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import Logo from '~/components/Logo.vue'
+import { Vue, Component } from 'vue-property-decorator';
 
-export default Vue.extend({
-  components: {
-    Logo
-  }
-})
+@Component
+export default class Index extends Vue {}
 </script>
 
 <style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-  @apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.layout {
+  background-color: theme('colors.main');
 }
 
 .title {

@@ -38,6 +38,9 @@ export default {
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss'
   ],
+  tailwindcss: {
+    exposeConfig: true
+  },
   /*
    ** Nuxt.js modules
    */
@@ -45,14 +48,5 @@ export default {
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv'
-  ],
-  /*
-   ** Build configuration
-   */
-  build: {
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {}
-  }
-}
+  ]
+};
