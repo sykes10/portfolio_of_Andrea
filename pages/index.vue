@@ -1,10 +1,13 @@
 <template>
-  <div class="layout">
-    <div class="container xl mx-auto px-40">
-      <h1 class="text-5xl">
-        I’m a Junior UX/UI designer based in London, starting on the path of UX
-        and UI Design.
-      </h1>
+  <div>
+    <h1 class="text-4xl text-center mt-40 text-shadow-4">
+      {{ home.title }}
+    </h1>
+    <div class="flex justify-center mt-20">
+      <span
+        class="border-black border-b-2 border-r-2 h-20 w-20"
+        style="transform: translateY(-25%) rotate(45deg);"
+      ></span>
     </div>
   </div>
 </template>
@@ -12,34 +15,36 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
 
-@Component
+@Component({
+  async asyncData({ $content }) {
+    const home = await $content('home').fetch();
+
+    return {
+      home,
+    };
+  },
+})
 export default class Index extends Vue {}
 </script>
 
 <style>
-.layout {
-  background-color: theme('colors.main');
+.text-shadow-4 {
+  color: pink;
+  animation: glow 15s ease-in-out infinite;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+@keyframes glow {
+  25% {
+    color: teal;
+  }
+  45% {
+    color: purple;
+  }
+  75% {
+    color: cyan;
+  }
+  100% {
+    color: pink;
+  }
 }
 </style>
