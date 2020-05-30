@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container text-secondary font-rubik">
     <AppHeader />
     <nuxt />
   </div>

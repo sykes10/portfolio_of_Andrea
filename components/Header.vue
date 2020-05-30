@@ -1,10 +1,15 @@
 <template>
-  <nav class="py-5">
+  <nav class="py-5 flex justify-between items-center">
     <h1 href="/" target="_self" class="text-3xl font-pt flex">
-      <span v-for="(letter, ind) of title" :key="ind" :style="letter.delay">{{
-        letter.letter
-      }}</span>
+      <span
+        v-for="(letter, ind) of title"
+        :key="ind"
+        :style="letter.delay"
+        class="letter text-secondary relative"
+        >{{ letter.letter }}</span
+      >
     </h1>
+    <nuxt-link to="/about">About</nuxt-link>
   </nav>
 </template>
 
@@ -25,16 +30,7 @@ export default class AppHeader extends Vue {
 </script>
 
 <style lang="scss">
-h1 span {
-  color: #581845;
-}
-h1 span:nth-child(2n) {
-  color: #ff5733;
-}
-h1 span {
-  animation: move-text 0.75s forwards;
-}
-h1 span {
+.letter {
   position: relative;
   opacity: 0;
   animation: move-text 0.75s forwards;

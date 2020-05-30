@@ -13,13 +13,18 @@ module.exports = {
     },
     fontFamily: {
       pt: [`'PT Mono'`, 'monospace'],
-      // rubik: [`'Rubik'`, 'sans-serif']
+      rubik: [`'Rubik'`, 'sans-serif'],
     },
     extend: {
+      spacing: {
+        lg: '22rem',
+      },
       colors: {
         main: {
-          dark: '#B0667D',
-          default: '#ffadc2',
+          default: '#faf7ed',
+        },
+        secondary: {
+          default: '#3E2708',
         },
       },
     },
