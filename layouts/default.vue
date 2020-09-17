@@ -1,10 +1,17 @@
 <template>
-  <div>
-    <Nuxt />
+  <div class="bg-background h-screen">
+    <app-header />
+    <main class="container" role="main">
+      <Nuxt />
+    </main>
   </div>
 </template>
-<script lang="ts">
-import Vue from 'vue'
-import Header from '~/components/header.vue'
-export default Vue.extend({})
+<script>
+import AppHeader from '~/components/header.vue'
+export default {
+  name: 'DefaultLayout',
+  components: {
+    AppHeader,
+  },
+}
 </script>
