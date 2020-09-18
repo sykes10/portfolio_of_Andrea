@@ -50,4 +50,8 @@ export default defineComponent({
 .underline-transition:hover::after {
   @apply w-full;
 }
+.nuxt-link-exact-active {
+  @apply font-medium;
+  @apply text-green-700;
+}
 </style>

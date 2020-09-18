@@ -4,8 +4,6 @@
 
 <script lang="ts">
 export default {
-  transition: 'home',
-
   head() {
     return {
       title: 'About | Portfolio',
