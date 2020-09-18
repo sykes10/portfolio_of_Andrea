@@ -1,6 +1,8 @@
 <template>
   <header class="container flex justify-between items-center py-2">
-    <h1 class="font-medium text-2xl font-rubik">AndreaDN.</h1>
+    <a href="/">
+      <h1 class="font-medium text-2xl font-rubik">AndreaDN.</h1>
+    </a>
     <nav>
       <ul class="flex space-x-4">
         <li v-for="link in links" :key="link.to">

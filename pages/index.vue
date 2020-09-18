@@ -4,7 +4,12 @@
       I’m Andrea De Armas, <br />
       a UX/UI Designer based in London.
     </p>
-    <img src="~/assets/images/andrea-homepage.svg" alt="" />
+    <img
+      src="~/assets/images/andrea-homepage.svg"
+      alt="Andrea de armas ilustration"
+      loading="lazy"
+      class="w-64"
+    />
   </section>
 </template>
 

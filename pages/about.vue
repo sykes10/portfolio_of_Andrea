@@ -1,5 +1,5 @@
 <template>
-  <section class="mt-64 flex items-center">This is the about section</section>
+  <section>This is the about section</section>
 </template>
 
 <script lang="ts">
