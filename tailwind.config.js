@@ -10,6 +10,9 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        rubik: 'rubik',
+      },
       colors: {
         background: '#FAF7ED',
       },

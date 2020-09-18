@@ -1,13 +1,12 @@
 <template>
-  <header class="container flex justify-between items-center">
-    <h1>AndreaDA.</h1>
+  <header class="container flex justify-between items-center py-2">
+    <h1 class="font-medium text-2xl font-rubik">AndreaDN.</h1>
     <nav>
       <ul class="flex space-x-4">
-        <li>
-          <nuxt-link to="/">HOME</nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/about">ABOUT</nuxt-link>
+        <li v-for="link in links" :key="link.to">
+          <nuxt-link :to="link.to" class="underline-transition uppercase">{{
+            link.text
+          }}</nuxt-link>
         </li>
       </ul>
     </nav>
@@ -15,9 +14,40 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent, reactive } from '@nuxtjs/composition-api'
 
 export default defineComponent({
-  name: 'header',
+  name: 'app-header',
+  setup() {
+    const links = reactive([
+      {
+        to: '/',
+        text: 'HOME',
+      },
+      {
+        to: '/about',
+        text: 'ABOUT',
+      },
+    ])
+
+    return { links }
+  },
 })
 </script>
+
+<style scoped>
+.underline-transition {
+  @apply inline-block;
+}
+.underline-transition::after {
+  content: '';
+  @apply w-0;
+  height: 2px;
+  @apply block;
+  @apply bg-black;
+  @apply duration-300;
+}
+.underline-transition:hover::after {
+  @apply w-full;
+}
+</style>

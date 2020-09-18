@@ -1,17 +1,20 @@
 <template>
-  <article>
-    <h1>{{ page.title }}</h1>
-    <p>{{ page.description }}</p>
-  </article>
+  <section class="mt-64 flex items-center">
+    <p class="text-6xl leading-snug">
+      I’m Andrea De Armas, <br />
+      a UX/UI Designer based in London.
+    </p>
+    <img src="~/assets/images/andrea-homepage.svg" alt="" />
+  </section>
 </template>
 
 <script lang="ts">
 export default {
-  async asyncData({ $content }) {
-    const page = await $content('index').fetch()
+  transition: 'home',
 
+  head() {
     return {
-      page,
+      title: 'AndreaDA. | Portfolio',
     }
   },
 }
