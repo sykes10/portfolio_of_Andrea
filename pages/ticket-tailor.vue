@@ -1,12 +1,12 @@
 <template>
-  <section>This is the about section</section>
+  <section>This is ticket tailor</section>
 </template>
 
 <script lang="ts">
 export default {
   head() {
     return {
-      title: 'About | Portfolio',
+      title: 'About | ticket tailor',
     };
   },
 };

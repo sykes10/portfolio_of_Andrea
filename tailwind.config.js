@@ -15,6 +15,7 @@ module.exports = {
       },
       colors: {
         background: '#FAF7ED',
+        peach: '#D99079',
       },
     },
   },
@@ -22,4 +23,4 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-}
+};

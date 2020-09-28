@@ -1,9 +1,7 @@
 <template>
-  <div class="bg-background h-screen">
+  <div class="bg-background h-auto min-h-full">
     <app-header />
-    <main class="container" role="main">
-      <Nuxt />
-    </main>
+    <Nuxt class="container" />
   </div>
 </template>
 <script>
