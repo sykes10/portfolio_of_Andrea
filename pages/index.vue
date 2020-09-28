@@ -1,16 +1,19 @@
 <template>
   <main>
-    <section class="my-64 flex items-center">
-      <p class="text-6xl leading-snug">
-        I’m Andrea De Armas, <br />
-        a UX/UI Designer based in London.
-      </p>
+    <section class="my-32 flex flex-col items-center space-y-8">
       <img
-        src="/images/andrea.svg"
+        src="/images/homepage/header.png"
         alt="Andrea de armas ilustration"
         loading="lazy"
         class="w-64"
       />
+      <p class="text-6xl leading-tight font-young text-center">
+        I’m Andrea De Armas, a UX/UI<br />
+        Designer based in London.
+      </p>
+      <nuxt-link to="/about" class="text-secondary underline-transition"
+        >MORE ABOUT</nuxt-link
+      >
     </section>
     <section>
       <div class="flex justify-between items-center mb-20">

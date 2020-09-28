@@ -10,12 +10,16 @@ module.exports = {
       },
     },
     extend: {
+      fontSize: {
+        '6xl': '3.5rem',
+      },
       fontFamily: {
         rubik: 'rubik',
+        young: 'young',
       },
       colors: {
         background: '#FAF7ED',
-        peach: '#D99079',
+        secondary: '#D99079',
       },
     },
   },
