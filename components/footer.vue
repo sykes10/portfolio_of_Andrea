@@ -1,17 +1,40 @@
 <template>
-  <footer class="container flex justify-between items-center py-2">
-    <a href="/">
-      <h1 class="font-medium text-2xl font-rubik">AndreaDN.</h1>
-    </a>
-    <nav>
-      <ul class="flex space-x-4">
-        <li v-for="link in links" :key="link.to">
-          <nuxt-link :to="link.to" class="underline-transition uppercase">{{
-            link.text
-          }}</nuxt-link>
-        </li>
-      </ul>
-    </nav>
+  <footer
+    class="container flex flex-col justify-between items-center py-2 pb-12"
+  >
+    <img
+      src="/images/icon-footer.png"
+      alt="icon footer"
+      class="w-12 mb-5"
+      loading="lazy"
+    />
+    <ul class="flex space-x-10 mb-8">
+      <li>
+        <a
+          class="uppercase underline"
+          href="mailto:alex.arevalo.dev@email.com"
+          rel="noopener"
+          noreferrer
+          target="_blank"
+        >
+          Email
+        </a>
+      </li>
+      <li>
+        <a
+          class="uppercase underline"
+          href="https://www.linkedin.com/in/andrea-alejandra-de-armas-nu%C3%B1ez-200200ba/"
+          rel="noopener"
+          noreferrer
+          target="_blank"
+        >
+          Linkedin
+        </a>
+      </li>
+    </ul>
+    <small class="uppercase text-gray-800 text-base"
+      >© 2020 Andrea De Armas</small
+    >
   </footer>
 </template>
 

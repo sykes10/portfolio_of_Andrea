@@ -1,10 +1,10 @@
 <template>
   <header class="container flex justify-between items-center py-2">
-    <a href="/">
+    <nuxt-link to="/" class="no-colour">
       <h1 class="font-medium text-2xl font-young leading-tight">
         Andrea<br />DN.
       </h1>
-    </a>
+    </nuxt-link>
     <nav>
       <ul class="flex space-x-8">
         <li v-for="link in links" :key="link.to">
@@ -43,5 +43,8 @@ export default defineComponent({
 .nuxt-link-exact-active {
   @apply font-medium;
   @apply text-green-700;
+}
+.nuxt-link-exact-active.no-colour {
+  @apply text-current;
 }
 </style>

@@ -3,10 +3,19 @@
 </template>
 
 <script lang="ts">
+import { NuxtOptionsHead } from '@nuxt/types/config/head';
+
 export default {
-  head() {
+  head(): NuxtOptionsHead {
     return {
-      title: 'About | Portfolio',
+      title: 'AndreaDA. | About',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'this is the about page',
+        },
+      ],
     };
   },
 };

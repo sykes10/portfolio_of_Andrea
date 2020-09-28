@@ -1,9 +1,16 @@
 <template>
-  <article class="flex flex-col items-center">
+  <article class="w-full mb-10 md:mb-0 px-4 md:px-0">
     <nuxt-link :to="portfolioCase.to">
-      <img :src="portfolioCase.image" alt="" class="mb-6" />
-      <h2 class="text-4xl leading-tight mb-2">{{ portfolioCase.title }}</h2>
-      <h3 class="font-rubik text-secondary font-normal">
+      <img
+        loading="lazy"
+        :src="portfolioCase.image"
+        alt=""
+        class="mb-6 object-cover mx-auto"
+      />
+      <h2 class="text-2xl md:text-5xl leading-tight mb-2">
+        {{ portfolioCase.title }}
+      </h2>
+      <h3 class="font-rubik text-secondary font-normal uppercase">
         {{ portfolioCase.type }}
       </h3>
     </nuxt-link>

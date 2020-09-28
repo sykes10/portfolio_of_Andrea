@@ -1,22 +1,26 @@
 <template>
-  <main>
-    <section class="my-32 flex flex-col items-center space-y-8">
+  <main class="mb-24">
+    <section
+      class="my-16 md:my-32 flex flex-col items-center space-y-8 mb-30 md:mb-64"
+    >
       <img
         src="/images/homepage/header.png"
         alt="Andrea de armas ilustration"
         loading="lazy"
-        class="w-64"
+        class="w-1/2 md:w-64 object-cover"
       />
-      <p class="text-6xl leading-tight font-young text-center">
+      <p class="text-3xl md:text-6xl leading-tight font-young text-center">
         I’m Andrea De Armas, a UX/UI<br />
         Designer based in London.
       </p>
-      <nuxt-link to="/about" class="text-secondary underline-transition"
-        >MORE ABOUT</nuxt-link
-      >
+      <nuxt-link to="/about" class="text-secondary underline-wiggle font-rubik">
+        MORE ABOUT
+      </nuxt-link>
     </section>
     <section>
-      <div class="flex justify-between items-center mb-20">
+      <div
+        class="flex flex-col md:flex-row justify-between items-center md:mb-20"
+      >
         <portfolio-case
           :portfolio-case="{
             image: '/images/homepage/ticket-tailor.png',
@@ -24,7 +28,7 @@
             type: 'UX/UI DESIGN',
             to: '/ticket-tailor',
           }"
-          class="w-2/5"
+          class="md:w-2/5"
         />
         <portfolio-case
           :portfolio-case="{
@@ -33,10 +37,12 @@
             type: 'Branding - UX/UI Design',
             to: '/email-octopus',
           }"
-          class="w-2/5"
+          class="md:w-2/5"
         />
       </div>
-      <div class="flex justify-between items-center mb-20">
+      <div
+        class="flex flex-col md:flex-row justify-between items-center md:mb-20"
+      >
         <portfolio-case
           :portfolio-case="{
             image: '/images/homepage/atriom.png',
@@ -44,7 +50,7 @@
             type: 'UX/UI DESIGN',
             to: '/atriom',
           }"
-          class="w-1/2"
+          class="md:w-1/2"
         />
         <portfolio-case
           :portfolio-case="{
@@ -53,7 +59,7 @@
             type: 'Branding - Illustration - UX/UI Design',
             to: '/football-app',
           }"
-          class="w-1/3"
+          class="md:w-1/3"
         />
       </div>
       <portfolio-case
@@ -63,21 +69,39 @@
           type: 'UX/UI DESIGN',
           to: '/small-business',
         }"
-        class="w-1/3 mx-auto"
+        class="md:w-1/3 mx-auto"
       />
     </section>
   </main>
 </template>
 
 <script lang="ts">
+import { NuxtOptionsHead } from '@nuxt/types/config/head';
 import PortfolioCase from '~/components/porfolio-case.vue';
 
 export default {
   components: { PortfolioCase },
-  head() {
+  head(): NuxtOptionsHead {
     return {
       title: 'AndreaDA. | Portfolio',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'This is a portfolio',
+        },
+      ],
     };
   },
 };
 </script>
+<style scoped>
+.underline-wiggle:hover {
+  background: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .5s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23D99079' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: 0 100%;
+  background-size: auto 4px;
+  background-repeat: repeat-x;
+  text-decoration: none;
+  transition: all;
+}
+</style>

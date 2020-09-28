@@ -3,10 +3,19 @@
 </template>
 
 <script lang="ts">
+import { NuxtOptionsHead } from '@nuxt/types/config/head';
+
 export default {
-  head() {
+  head(): NuxtOptionsHead {
     return {
-      title: 'About | ticket tailor',
+      title: 'AndreaDA. | Small business',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'This is small bussiness',
+        },
+      ],
     };
   },
 };
