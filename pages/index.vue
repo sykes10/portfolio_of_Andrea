@@ -1,70 +1,100 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">andreaPortfolio</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <main class="mb-24">
+    <section
+      class="my-16 md:my-32 flex flex-col items-center space-y-8 mb-30 md:mb-64"
+    >
+      <img
+        src="/images/homepage/header.png"
+        alt="Andrea de armas ilustration"
+        loading="lazy"
+        class="w-1/2 md:w-64 object-cover"
+      />
+      <p class="text-3xl md:text-6xl leading-tight font-young text-center">
+        I’m Andrea De Armas, a UX/UI<br />
+        Designer based in London.
+      </p>
+      <nuxt-link
+        to="/about"
+        class="text-secondary underline-transition font-rubik"
+      >
+        MORE ABOUT
+      </nuxt-link>
+    </section>
+    <section>
+      <div
+        class="flex flex-col md:flex-row justify-between items-center md:mb-20"
+      >
+        <portfolio-case
+          :portfolio-case="{
+            image: '/images/homepage/ticket-tailor.png',
+            title: 'New identity for a group of dreamers',
+            type: 'UX/UI DESIGN',
+            to: '/ticket-tailor',
+          }"
+          class="md:w-2/5"
+        />
+        <portfolio-case
+          :portfolio-case="{
+            image: '/images/homepage/email-octopus.png',
+            title: 'Re-branding a trusted Email platform',
+            type: 'Branding - UX/UI Design',
+            to: '/email-octopus',
+          }"
+          class="md:w-2/5"
+        />
       </div>
-    </div>
-  </div>
+      <div
+        class="flex flex-col md:flex-row justify-between items-center md:mb-20"
+      >
+        <portfolio-case
+          :portfolio-case="{
+            image: '/images/homepage/atriom.png',
+            title: 'A startup looking for a clean and safe look',
+            type: 'UX/UI DESIGN',
+            to: '/atriom',
+          }"
+          class="md:w-1/2"
+        />
+        <portfolio-case
+          :portfolio-case="{
+            image: '/images/homepage/football-app.png',
+            title: 'Making an app for the ultimate fan',
+            type: 'Branding - Illustration - UX/UI Design',
+            to: '/football-app',
+          }"
+          class="md:w-1/3"
+        />
+      </div>
+      <portfolio-case
+        :portfolio-case="{
+          image: '/images/homepage/small-business.png',
+          title: 'Giving a hand to the small business',
+          type: 'UX/UI DESIGN',
+          to: '/small-business',
+        }"
+        class="md:w-1/3 mx-auto"
+      />
+    </section>
+  </main>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { NuxtOptionsHead } from '@nuxt/types/config/head';
+import PortfolioCase from '~/components/porfolio-case.vue';
 
-export default Vue.extend({})
+export default {
+  components: { PortfolioCase },
+  head(): NuxtOptionsHead {
+    return {
+      title: 'AndreaDA. | Portfolio',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'This is a portfolio',
+        },
+      ],
+    };
+  },
+};
 </script>
-
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>

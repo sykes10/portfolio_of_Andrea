@@ -1,0 +1,26 @@
+.page-enter-active,
+.page-leave-active {
+    transition: opacity 0.5s;
+}
+
+.page-enter,
+.page-leave-to {
+    opacity: 0;
+}
+
+.underline-transition {
+    @apply inline-block;
+}
+
+.underline-transition::after {
+    content: '';
+    @apply w-0;
+    @apply py-px;
+    @apply block;
+    @apply bg-current;
+    @apply duration-300;
+}
+
+.underline-transition:hover::after {
+    @apply w-full;
+}

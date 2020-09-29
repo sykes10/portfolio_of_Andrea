@@ -1,9 +1,9 @@
 {
-  "name": "andreaPortfolio",
+  "name": "andrea-portfolio",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt-ts",
+    "dev": "nuxt-ts --port 3333",
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
@@ -13,8 +13,10 @@
   "dependencies": {
     "@nuxt/content": "^1.8.1",
     "@nuxt/typescript-runtime": "^2.0.0",
+    "@nuxtjs/composition-api": "^0.12.4",
     "@nuxtjs/pwa": "^3.0.2",
     "core-js": "^3.6.5",
+    "nuxt-compress": "^3.0.0"
     "nuxt": "^2.14.6"
   },
   "devDependencies": {
