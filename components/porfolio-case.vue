@@ -4,7 +4,7 @@
       <img
         loading="lazy"
         :src="portfolioCase.image"
-        alt=""
+        :alt="portfolioCase.alt"
         class="mb-6 object-cover mx-auto"
       />
       <h2 class="text-2xl md:text-5xl leading-tight mb-2">

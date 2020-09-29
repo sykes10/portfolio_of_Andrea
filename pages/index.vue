@@ -30,6 +30,7 @@
             title: 'New identity for a group of dreamers',
             type: 'UX/UI DESIGN',
             to: '/ticket-tailor',
+            alt: 'ticket tailor portfolio case',
           }"
           class="md:w-2/5"
         />
@@ -39,6 +40,7 @@
             title: 'Re-branding a trusted Email platform',
             type: 'Branding - UX/UI Design',
             to: '/email-octopus',
+            alt: 'email octopus portfolio case',
           }"
           class="md:w-2/5"
         />
@@ -52,6 +54,7 @@
             title: 'A startup looking for a clean and safe look',
             type: 'UX/UI DESIGN',
             to: '/atriom',
+            alt: 'atriom portfolio case',
           }"
           class="md:w-1/2"
         />
@@ -61,6 +64,7 @@
             title: 'Making an app for the ultimate fan',
             type: 'Branding - Illustration - UX/UI Design',
             to: '/football-app',
+            alt: 'football app portfolio case',
           }"
           class="md:w-1/3"
         />
@@ -71,6 +75,7 @@
           title: 'Giving a hand to the small business',
           type: 'UX/UI DESIGN',
           to: '/small-business',
+          alt: 'small bussiness portfolio case',
         }"
         class="md:w-1/3 mx-auto"
       />
