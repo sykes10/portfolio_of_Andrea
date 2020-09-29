@@ -13,7 +13,10 @@
         I’m Andrea De Armas, a UX/UI<br />
         Designer based in London.
       </p>
-      <nuxt-link to="/about" class="text-secondary underline-wiggle font-rubik">
+      <nuxt-link
+        to="/about"
+        class="text-secondary underline-transition font-rubik"
+      >
         MORE ABOUT
       </nuxt-link>
     </section>
@@ -95,13 +98,3 @@ export default {
   },
 };
 </script>
-<style scoped>
-.underline-wiggle:hover {
-  background: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .5s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23D99079' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
-  background-position: 0 100%;
-  background-size: auto 4px;
-  background-repeat: repeat-x;
-  text-decoration: none;
-  transition: all;
-}
-</style>

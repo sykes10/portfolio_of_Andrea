@@ -15,7 +15,7 @@
 .underline-transition::after {
     content: '';
     @apply w-0;
-    height: 2px;
+    @apply py-px;
     @apply block;
     @apply bg-current;
     @apply duration-300;
