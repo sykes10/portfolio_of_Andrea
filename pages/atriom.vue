@@ -3,11 +3,12 @@
 </template>
 
 <script lang="ts">
-import { NuxtOptionsHead } from '@nuxt/types/config/head';
+import { defineComponent, useMeta } from '@nuxtjs/composition-api';
 
-export default {
-  head(): NuxtOptionsHead {
-    return {
+export default defineComponent({
+  head: {},
+  setup() {
+    useMeta({
       title: 'AndreaDA. | Atriom',
       meta: [
         {
@@ -16,7 +17,7 @@ export default {
           content: 'This is aatriom',
         },
       ],
-    };
+    });
   },
-};
+});
 </script>

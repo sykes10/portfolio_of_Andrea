@@ -84,13 +84,14 @@
 </template>
 
 <script lang="ts">
-import { NuxtOptionsHead } from '@nuxt/types/config/head';
+import { defineComponent, useMeta } from '@nuxtjs/composition-api';
 import PortfolioCase from '~/components/porfolio-case.vue';
 
-export default {
+export default defineComponent({
   components: { PortfolioCase },
-  head(): NuxtOptionsHead {
-    return {
+  head: {},
+  setup() {
+    useMeta({
       title: 'AndreaDA. | Portfolio',
       meta: [
         {
@@ -99,7 +100,7 @@ export default {
           content: 'This is a portfolio',
         },
       ],
-    };
+    });
   },
-};
+});
 </script>
