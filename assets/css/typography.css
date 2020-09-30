@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'young';
+    src: url('~assets/fonts/YoungSerif-Regular.otf') format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'rubik';
+    src: url('~assets/fonts/Rubik-VariableFont_wght.ttf') format("truetype supports variations"),
+        url('~assets/fonts/Rubik-VariableFont_wght.ttf') format("truetype-variations");
+    font-weight: 100 1000;
+    font-stretch: 25% 151%;
+    font-display: swap;
+}
