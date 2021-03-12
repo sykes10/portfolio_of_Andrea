@@ -1,84 +1,22 @@
 <template>
   <main class="mb-24">
-    <section
-      class="my-16 md:my-32 flex flex-col items-center space-y-8 mb-30 md:mb-64"
-    >
+    <section class="my-16 md:my-32 flex items-center">
       <img
-        src="/images/homepage/header.png"
+        src="/images/main-image-1.png"
         alt="Andrea de armas ilustration"
         loading="lazy"
-        class="w-1/2 md:w-64 object-cover"
+        class="w-100 h-120 object-cover mr-24"
       />
-      <p class="text-3xl md:text-6xl leading-tight font-young text-center">
-        I’m Andrea De Armas, a UX/UI<br />
-        Designer based in London.
-      </p>
-      <nuxt-link
-        to="/about"
-        class="text-secondary underline-transition font-karla"
-      >
-        MORE ABOUT
-      </nuxt-link>
-    </section>
-    <section>
-      <div
-        class="flex flex-col md:flex-row justify-between items-center md:mb-20"
-      >
-        <portfolio-case
-          :portfolio-case="{
-            image: '/images/homepage/ticket-tailor.png',
-            title: 'New identity for a group of dreamers',
-            type: 'UX/UI DESIGN',
-            to: '/ticket-tailor',
-            alt: 'ticket tailor portfolio case',
-          }"
-          class="md:w-2/5"
-        />
-        <portfolio-case
-          :portfolio-case="{
-            image: '/images/homepage/email-octopus.png',
-            title: 'Re-branding a trusted Email platform',
-            type: 'Branding - UX/UI Design',
-            to: '/email-octopus',
-            alt: 'email octopus portfolio case',
-          }"
-          class="md:w-2/5"
-        />
+      <div class="space-y-5">
+        <p class="text-6xl leading-tight font-young">
+          UI/UX Designer<br />
+          settled in London.
+        </p>
+        <p class="text-2xl font-normal font-karla">
+          Pixels are being cleaned, layers are being named and<br />
+          case studies are being written. Coming up soon :)
+        </p>
       </div>
-      <div
-        class="flex flex-col md:flex-row justify-between items-center md:mb-20"
-      >
-        <portfolio-case
-          :portfolio-case="{
-            image: '/images/homepage/atriom.png',
-            title: 'A startup looking for a clean and safe look',
-            type: 'UX/UI DESIGN',
-            to: '/atriom',
-            alt: 'atriom portfolio case',
-          }"
-          class="md:w-1/2"
-        />
-        <portfolio-case
-          :portfolio-case="{
-            image: '/images/homepage/football-app.png',
-            title: 'Making an app for the ultimate fan',
-            type: 'Branding - Illustration - UX/UI Design',
-            to: '/football-app',
-            alt: 'football app portfolio case',
-          }"
-          class="md:w-1/3"
-        />
-      </div>
-      <portfolio-case
-        :portfolio-case="{
-          image: '/images/homepage/small-business.png',
-          title: 'Giving a hand to the small business',
-          type: 'UX/UI DESIGN',
-          to: '/small-business',
-          alt: 'small bussiness portfolio case',
-        }"
-        class="md:w-1/3 mx-auto"
-      />
     </section>
   </main>
 </template>

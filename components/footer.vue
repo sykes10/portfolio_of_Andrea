@@ -1,61 +1,50 @@
 <template>
   <footer
-    class="container flex flex-col justify-between items-center py-2 pb-12"
+    class="container flex justify-between items-center py-2 text-gray font-karla"
   >
-    <img
-      src="/images/icon-footer.png"
-      alt="icon footer"
-      class="w-12 mb-5"
-      loading="lazy"
-    />
-    <ul class="flex space-x-10 mb-8">
-      <li>
+    <small class="uppercase text-base">© {{ year }} Andrea De Armas</small>
+    <ul class="flex space-x-6 font-bold">
+      <li
+        v-for="link in links"
+        :key="link.href"
+        class="rounded-full border border-gray py-2 px-5"
+      >
         <a
-          class="uppercase underline"
-          href="mailto:alex.arevalo.dev@email.com"
+          class="uppercase"
+          :href="link.href"
           rel="noopener"
           noreferrer
           target="_blank"
         >
-          Email
-        </a>
-      </li>
-      <li>
-        <a
-          class="uppercase underline"
-          href="https://www.linkedin.com/in/andrea-alejandra-de-armas-nu%C3%B1ez-200200ba/"
-          rel="noopener"
-          noreferrer
-          target="_blank"
-        >
-          Linkedin
+          {{ link.text }}
         </a>
       </li>
     </ul>
-    <small class="uppercase text-gray-800 text-base"
-      >© 2020 Andrea De Armas</small
-    >
   </footer>
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive } from '@nuxtjs/composition-api';
+import { defineComponent, computed } from '@nuxtjs/composition-api';
 
 export default defineComponent({
   name: 'app-header',
   setup() {
-    const links = reactive([
+    const links = computed(() => [
       {
-        to: '/',
-        text: 'HOME',
+        href: 'mailto:andrea.design@email.com',
+        text: 'Email',
       },
       {
-        to: '/about',
-        text: 'ABOUT',
+        href:
+          'https://www.linkedin.com/in/andrea-alejandra-de-armas-nu%C3%B1ez-200200ba/',
+        text: 'Linkedin',
       },
     ]);
+    const year = computed(() =>
+      new Intl.DateTimeFormat('en-GB', { year: 'numeric' }).format(new Date())
+    );
 
-    return { links };
+    return { links, year };
   },
 });
 </script>
