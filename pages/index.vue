@@ -15,7 +15,7 @@
       </p>
       <nuxt-link
         to="/about"
-        class="text-secondary underline-transition font-rubik"
+        class="text-secondary underline-transition font-karla"
       >
         MORE ABOUT
       </nuxt-link>

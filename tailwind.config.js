@@ -12,7 +12,7 @@ module.exports = {
         '6xl': '3.5rem',
       },
       fontFamily: {
-        rubik: 'rubik',
+        karla: 'karla',
         young: 'young',
       },
       colors: {

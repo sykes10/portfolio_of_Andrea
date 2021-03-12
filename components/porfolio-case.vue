@@ -10,7 +10,7 @@
       <h2 class="text-2xl md:text-5xl leading-tight mb-2">
         {{ portfolioCase.title }}
       </h2>
-      <h3 class="font-rubik text-secondary font-normal uppercase">
+      <h3 class="font-karla text-secondary font-normal uppercase">
         {{ portfolioCase.type }}
       </h3>
     </nuxt-link>
