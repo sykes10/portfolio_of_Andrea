@@ -1,7 +1,9 @@
 <template>
-  <div class="bg-background h-auto min-h-screen font-young">
+  <div
+    class="container bg-background h-auto min-h-screen font-young overflow-hidden"
+  >
     <app-header />
-    <Nuxt class="container" />
+    <nuxt class="container" />
     <app-footer />
   </div>
 </template>
